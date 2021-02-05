@@ -27,19 +27,10 @@ class Box extends Component{
         this.element.color = elem.color;
     }
 
-    getProps(){
-        //console.log(`Element: ${this.element}; Width: ${this.width}; Hight: ${this.hight}; Background: ${this.color}; Display: ${this.style.display}`);
-       console.log(this.element);
-        let message;
-       for(const key in this.element){
-         console.log(key, this.element[key]);
-           if(typeof this.element[key] !== 'object'){
-              const keysName = key[0].toUpperCase() + key.slice(1);
-              message += `${keysName}: ${this.element[key]}; `
-           }
-        }
-       console.log(message)
+    getProps() {
+        console.log(`Element: ${this.element.tag}; Width: ${this.element.width}; Hight: ${this.element.hight}; Background: ${this.element.color}; Display: ${this.element.style.display}`);
     }
+       
 }
 
 
